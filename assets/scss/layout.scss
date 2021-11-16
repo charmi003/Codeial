@@ -1,0 +1,114 @@
+$font: 'Source Sans Pro', sans-serif;
+$deepBlue:#032f3e;
+
+body
+{
+    
+    font-family:$font;
+    margin:0;
+    padding:0;
+}
+
+
+#layout-main
+{
+    min-height:100%;
+    height:auto;
+    padding:0 16px;
+}
+
+
+/*Common styles for header and footer*/
+@mixin header_footer
+{
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    height:70px;
+    padding:0 16px;
+    color:white;
+
+    ul
+    {
+        display:flex;
+    }
+    li
+    {
+        list-style-type: none;
+    }
+    a
+    {
+        display:inline-block;
+        text-decoration: none;
+        padding:16px;
+        color:wheat;   
+        font-size:18px;   
+        &:hover
+        {
+            color:white;
+            transform:scale(1.1);
+        }  
+    }
+
+
+}
+
+
+
+/*styling the header*/
+header
+{
+    @include header_footer;
+    background-color:$deepBlue;
+}
+
+
+
+/*Styling the footer*/
+footer
+{
+    @include header_footer;
+    background-color: dimgray;
+    font-size:20px;
+
+    a
+    {
+        font-size:20px;
+        color:white;
+    }
+    
+}
+
+
+
+/*Styling for password and confirm password fields*/ 
+
+.p
+{
+    display:flex;
+    border:1px solid grey;
+    width:200px;
+}
+input[name$="assword"]
+{
+    border:none;
+}
+input[name$="assword"]:focus{
+    outline-width: 0;
+}
+
+.fa-eye-slash,.fa-eye
+{
+    color:grey;
+    cursor: pointer;
+    display:none;
+}
+.fa-eye-slash
+{
+    display: initial;
+}
+
+
+
+
+

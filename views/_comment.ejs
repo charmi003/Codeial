@@ -1,0 +1,39 @@
+<li class="comment-box" id=<%=comment._id%>>
+    <p><%= comment.User.Name %> --> &nbsp; <%= comment.Content %></p>&nbsp;&nbsp;
+    <br>
+
+    <% if(locals.user) {
+
+        //check if this user has alreday liked this comment or not and display the icon accordingly
+        let isLiked=comment.Likes.find( o=> o.User==locals.user.id);
+     %>
+        <div class="like-info">
+            <a href="/likes/toggle/?p_id=<%= comment._id %>&p_type=Comment"></a>
+
+                <% if(isLiked) { %>
+                    <i class="fas fa-heart like"></i>
+                <% }else{ %>
+                    <i class="far fa-heart like"></i>
+                <% } %>
+               
+            </a>
+            <span><span class="like-count"><%= comment.Likes.length %></span> Likes</span>
+        </div>
+
+    <% }else{ %>
+        <div class="like-info">
+            <i class="far fa-heart like"></i>
+            <span><span class="like-count"><%= comment.Likes.length %></span> Likes</span>
+        </div>
+
+
+    <% } %>
+
+    <% if(locals.user && (comment.User.id==locals.user.id || post.User.id==locals.user.id) ){ %>
+        <br>
+        <button class="delete-comment" id=<%= comment._id%> >
+            <a href="/comments/destroy/<%= comment._id %>">Delete this comment</a>
+        </button>
+    <% } %>
+   
+</li>

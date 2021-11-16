@@ -1,0 +1,90 @@
+#chatbox-container
+{
+    position:fixed;
+    // height:400px;
+    // top:43%;
+    right:2%;
+    bottom:2%;
+    background:whitesmoke;
+    width:20%;
+    border:3px dotted darkslategray;
+
+    i{
+        position:absolute;
+        top:-10px;
+        right:-18px;
+        color:darkslategrey;
+    }
+
+    #chat-messages-container
+    {
+        height:89%;
+        overflow-y:auto;
+
+        ul{
+            display:flex;
+            flex-direction: column;
+            margin:0;
+            padding:0;
+        }
+
+        li{
+            list-style-type: none;
+            word-wrap: break-word;
+            height:auto;
+            width:50%;
+            margin:4px;
+            padding:7px;
+            color:white;
+            font-size:18px;
+
+            small
+            {
+                font-size:13px;
+                color:darkslategray;
+            }
+        }
+        .other-message
+        {
+            background:salmon;
+            align-self: flex-start;
+        }
+        .self-message
+        {
+            background:skyblue;
+            align-self: flex-end;
+        }
+    }
+
+    form
+    {
+        input{
+            height:40px;
+            width:69%;
+            margin:0;
+            padding-left:10px;
+            border:0;
+            &:focus{
+                outline-color: skyblue;
+                outline-width:3px;
+            }
+        }
+        input[type="submit"]{
+            width:29%;
+            height:40px;
+            background:green;
+            color:white;
+        }
+
+    }
+}
+.large
+{
+    height:400px;
+    top:43%;
+}
+.small
+{
+    height:100px;
+    top:85%;
+}

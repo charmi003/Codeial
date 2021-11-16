@@ -1,0 +1,50 @@
+    <link rel="stylesheet" href="<%= assetPath('css/user_profile.css') %>">
+       
+    <h1>Heyaa!! User Profile Page</h1>
+
+    <!-- show the default avatar pic if the user doesn't have an avatar already -->
+    <% if(!profile_user.Avatar){ %>
+        <img src="<%= assetPath('images/default_avatar.png') %>" id="default_avatar" height="200px" width="200px">
+    <% } %>
+    
+    <img id="avatar-img" src="<%= profile_user.Avatar %>" alt="Pofile picture" height="0" width="0"><br><br>
+
+    
+
+    <% if(locals.user.id==profile_user.id){ %>
+        <!-- If this is the current signed in user then show the form -->
+        <form action="/users/update/<%= profile_user._id %>" method="post" enctype="multipart/form-data" id="user-profile-update-form">
+            <input type="text" name="Name" id="Name" placeholder="Your name" value=<%= profile_user.Name %> required>
+            <input type="email" name="Email" id="Email" placeholder="Your email" value=<%= profile_user.Email %> required>
+            <input type="file" name="Avatar" id="Avatar" placeholer="Upload a Profile picture">
+            <br><br><button type="submit">Update</button>
+        </form>
+
+
+    <% }else{ %>
+
+        <!-- else display the profile info -->
+        <p>Name: <%= profile_user.Name %></p>
+        <p>Email: <%= profile_user.Email %></p>
+
+        <!-- check if friends already (profile_user and the current logged in user)  -->
+        <% let found=false;
+            profile_user.Friends.forEach(function(friendship){
+            if(friendship.From_user.id==user.id || friendship.To_user.id==user.id )
+                found=true;
+        }) %>
+
+        <!-- if yes, show the remove friend option else show the add friend option -->
+        <% if(found){ %>
+            <a href="/friends/remove/?second_user=<%= profile_user._id %>">Remove Friend</a>
+        <% }else{ %>
+            <a href="/friends/add/?second_user=<%= profile_user._id %>">Add Friend</a>
+        <% } %>
+
+        
+    <% } %>
+
+    <script src="<%= assetPath('js/user_profile.js') %>"></script>
+    
+
+    

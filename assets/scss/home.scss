@@ -1,0 +1,65 @@
+#body-container
+{
+    display:flex;
+
+    #feed-posts
+    {
+        width:70%;
+        padding:10px;
+        min-height:100vh;
+    }
+
+    #people
+    {
+        border-left:2px solid lightgray;
+        min-height:100vh;
+        display:flex;
+        flex-direction:column;
+        width:35%;
+    }
+    #all_users,#friends
+    {
+        padding:10px;
+    }
+    #friends
+    {
+        border-bottom:1px solid lightgray;
+    }
+}
+
+.post-box
+{
+    border:1px solid brown;
+    position:relative;
+    padding-left: 8px;
+
+    li p
+    {
+        display:inline-block;
+        
+    }
+}
+
+button.delete-post
+{
+    position:absolute;
+    top:5px;
+    right:2px;
+}
+
+.fa-heart
+{
+    color:Red;
+}
+
+.like-info
+{
+    display: flex;
+    align-items: center;
+    
+    span{
+        display:inline-block;
+        margin-left:5px;
+    }
+}
+

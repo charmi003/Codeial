@@ -1,0 +1,19 @@
+<header>
+
+    <h1>Codeial</h1>
+    <ul>
+
+        <% if(locals.user){ %>
+
+            <li> <a href="/users/profile/<%= user._id %>"> <%= user.Name %> </a> </li>
+            <li> <a href="/users/signOut">Sign Out</a> </li>
+
+        <% }else{ %>
+
+            <li> <a href="/users/signUp">Sign Up</a> </li>
+            <li> <a href="/users/signIn">Sign In</a> </li>
+
+        <% } %>
+    </ul>
+
+</header>

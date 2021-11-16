@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title><%= title %></title>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css">
+
+         <!-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> -->
+
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+
+        <link rel="stylesheet" href= "<%= assetPath('css/layout.css') %>">
+        <%- style %>
+    </head>
+
+
+    
+    <body>
+
+        <%- include("./_header"); %>
+
+        <main id="layout-main">
+        <%- body %>
+        </main>
+        
+        <%- include("./_footer"); %>
+
+        <input type="hidden" name="flash-success-message" id="flash-success-message" val="<%= flash.success %>">
+        <input type="hidden" name="flash-error-message" id="flash-error-message" val="<%= flash.error %>">
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="<%= assetPath('js/layout.js') %>"></script>
+
+
+    <%- script %>
+        
+    </body>
+</html>

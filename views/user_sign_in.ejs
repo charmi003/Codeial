@@ -1,0 +1,22 @@
+<h1>Sign In!</h1>
+<form action="/users/createSession" method="post">
+
+    <input type="email" name="Email" id="Email" placeholder="Your email" required>
+    <br><br>
+
+    <div class="p">
+        <input type="password" name="Password" id="Password" required  placeholder="Your password" style="font-family:Arial, FontAwesome" />
+        <i class="fas fa-eye-slash"></i>
+        <i class="fas fa-eye"></i>
+
+    </div>
+    <br><br>
+    
+    <button type="submit">Sign In</button>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;  <a href="/forgotPassword/emailForm">Forgot Password?</a>
+
+    <h1>OR</h1>
+    <button><a href="/auth/google">Sign In with Google</a></button>
+
+</form>
