@@ -1,7 +1,7 @@
 const express=require("express");
 const env=require("./config/environment");
 console.log(env.name);
-const port=env.port;
+// const port=env.port;
 const path=require("path");
 const customMiddleWares=require("./config/middleware");
 
@@ -102,7 +102,7 @@ app.use("/",require("./routes/index"));   //using the express router
 
 
 
-app.listen(port,function(err){
+app.listen(process.env.PORT || 2000,function(err){
     if(err)
     {
         console.log(`Error: ${err}`)   //This is known as interpolation , use backticks and to include a variable use ${varname}
