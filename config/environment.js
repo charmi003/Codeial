@@ -19,7 +19,7 @@ const development={
     assets_path:"./assets",
     chat_server_port:5000,
     session_cookie_secret_key:"HzgczLQFB4Sv8NXnziJE0vOCOTk0Lc9Z",
-    mongoDB_url:'mongodb://localhost/codeial_development',
+    mongoDB_url:'mongodb+srv://charmi:charmi003@beach-resort.wnheq.mongodb.net/Codeial?retryWrites=true&w=majority',
     smtp:{   
         service:"gmail",
         host:"smtp.gmail.com",
