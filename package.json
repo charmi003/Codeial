@@ -4,7 +4,7 @@
   "description": "Social media web app",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "node index.js",
     "prod_start": "SET codeial_environment=production & node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
