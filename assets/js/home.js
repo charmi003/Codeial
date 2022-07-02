@@ -1,8 +1,5 @@
 //AJAX by default sends a XMLHttpRequest (xhr)
 
-
-
-
 //using local storage because ..if we reach the home page via back button, the things added by AJAX don't show up as they are not remembered in the history..so storing it in the local storage
 
 /*If the user reaches the page via back button, the content added previouly to the DOM by AJAX shoulb be there..so refresh the page so that all the content is there*/
@@ -16,7 +13,7 @@ for (var i = 0; i < perfEntries.length; i++) {
 
 
 
-/*Creating a pot using AJAX*/
+/*Creating a post using AJAX*/
 let createPost=function(){
     let newPostForm=$("#new-post-form");
     

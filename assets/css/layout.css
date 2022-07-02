@@ -22,6 +22,11 @@ header {
   background-color: #032f3e;
 }
 
+header h1 a{
+  text-decoration: none;
+  color: white;
+}
+
 header ul {
   display: flex;
 }
@@ -30,7 +35,7 @@ header li {
   list-style-type: none;
 }
 
-header a {
+header a:not(header h1 a) {
   display: inline-block;
   text-decoration: none;
   padding: 16px;

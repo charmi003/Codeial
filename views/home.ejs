@@ -76,10 +76,8 @@
 <script src="<%= assetPath('js/chat_engine.js') %>"></script>
 
 <% if(locals.user){ %>
-
     <script>
         let chat_engine=new chatEngine("chatbox-container","<%= locals.user.Email %>","<%= locals.user.Name%>");
         console.log(chat_engine);
     </script>
-
-<% } %>
+<% } %> 
