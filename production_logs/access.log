@@ -156,3 +156,13 @@
 [0mGET /users/profile/60dc7b402b941b4a785b53f6 [32m200[0m 56.815 ms - 3006[0m
 [0mGET /likes/toggle/?p_id=60e499b81e76c10c50af2c4b&p_type=Comment [32m200[0m 69.907 ms - 45[0m
 [0mGET / [32m200[0m 134.097 ms - 14406[0m
+[0mGET / [32m200[0m 154.718 ms - 7839[0m
+[0mGET /users/signIn [32m200[0m 17.849 ms - 2642[0m
+[0mGET / [36m304[0m 131.004 ms - -[0m
+[0mPOST / [33m404[0m 4.901 ms - 140[0m
+[0mGET / [32m200[0m 68.636 ms - 7329[0m
+[0mGET /users/signIn [36m304[0m 11.439 ms - -[0m
+[0mGET /auth/google [36m302[0m 3.239 ms - 0[0m
+[0mGET /auth/google/callback?code=4%2F0AX4XfWijzBPIy0SK4r8FaGTh1sf8lAKSo2PWxuQCU0ClDyhY_Ykk5bSplSbXkG5V3AHziQ&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=0&prompt=consent [36m302[0m 775.858 ms - 46[0m
+[0mGET / [32m200[0m 68.204 ms - 14435[0m
+[0mPOST /posts/create [32m200[0m 52.456 ms - 331[0m

@@ -66,8 +66,9 @@
 
 </div>
 
-<%- include("_chatbox"); %>
-
+<% if(locals.user){ %>
+    <%- include("_chatbox"); %>
+<% } %> 
 
 
 <script src="<%= assetPath('js/home.js') %>"></script>
